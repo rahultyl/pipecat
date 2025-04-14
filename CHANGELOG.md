@@ -10,12 +10,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added `LLMUserAggregatorParams` and `LLMAssistantAggregatorParams` which allow
+  you to control aggregator settings. You can now pass these arguments when
+  creating aggregator pairs with `create_context_aggregator()`.
+
 - It is now possible to disable `SoundfileMixer` when created. You can then use
   `MixerEnableFrame` to dynamically enable it when necessary.
 
 ### Changed
 
 - `SoundfileMixer` constructor arguments need to be keywords.
+
+### Deprecated
+
+- Parameters `user_kwargs` and `assistant_kwargs` when creating a context
+  aggregator pair using `create_context_aggregator()` are now deprecated. Use
+  `user_params` and `assistant_params` instead.
 
 ### Fixed
 
